@@ -1,0 +1,12 @@
+*{
+	font-family:'arial';
+}
+h1{color:rgb(255,0,0);}
+h2{color:#0000ff;}
+#fourthpara{color:orange}
+.firsthead{color:blue}
+
+section:first-child{
+	
+	background:yellow;
+}
