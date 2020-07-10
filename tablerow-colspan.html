@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Column and Row span in table</title>
+	<style>
+	*{
+		font-family:"arial";
+	}
+		.render {
+			border: 24px solid #efefef;
+			padding: 24px;
+			background-color: #fefefe;
+		}
+		.render table, .render td, .render th {
+			border: 1px solid #000;
+		}
+		.render table {
+			border-collapse: collapse;
+		}
+		table {
+			border-top: 0;
+			margin-bottom: 1.5em;
+			position: relative;
+			table-layout: fixed;
+			width: 100%;
+			z-index: 1;
+			border-top: 1px solid #eee;
+			margin: 0 0 1.75em;
+			max-width: 100%;
+		}
+		table tr {
+			border-bottom: 1px solid #f0f0f0;
+		}
+		.render td, .render th {
+			padding: 5px;
+		}
+		.render table, .render td, .render th {
+			border: 1px solid #000;
+		}
+		table th, table td {
+			font-family: inherit;
+			font-size: inherit;
+			padding: 12px;
+			vertical-align: middle;
+		}
+		table th {
+			text-align: left;
+		}
+		caption{
+			font-size:1rem;
+			font-weight:700;
+			color:blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="render">
+	<h1>Table with colspan</h1>
+	<table> 
+		<caption>No of people in a age group gender wise in a community</caption> 
+		<tr> 
+			<th colspan="2">65</th> 
+			<th colspan="2">40</th> 
+			<th colspan="2">20</th> 
+		</tr> 
+		<tr> 
+			<th>Men</th> 
+			<th>Women</th> 
+			<th>Men</th> 
+			<th>Women</th> 
+			<th>Men</th> 
+			<th>Women</th> 
+		</tr> 
+		<tr> 
+			<td>82</td> 
+			<td>85</td> 
+			<td>78</td> 
+			<td>82</td> 
+			<td>77</td> 
+			<td>81</td> 
+		</tr>
+	  </table>
+	</div>
+		<br>
+		<br>
+	<div class="render">	
+		<h1> Table with row span</h1>
+			<table> 
+				<caption>Favorite and Least Favorite Things</caption> 
+				<tr> 
+					<th></th>
+					<th></th> 
+					<th>Mounika</th> 
+					<th>Rani</th> 
+				</tr> 
+				<tr> 
+					<th rowspan="2">Favorite</th> 
+					<th>Color</th> 
+					<td>Blue</td> 
+					<td>Purple</td> 
+				</tr> 
+				<tr>					
+					<th>Flavor</th> 
+					<td>Banana</td> 
+					<td>Chocolate</td> 
+				</tr> 
+				<tr> 
+					<th rowspan="2">Least Favorite</th> 
+					<th>Color</th> 
+					<td>Yellow</td> 
+					<td>Pink</td> 
+				</tr> 
+				<tr> 
+					<th>Flavor</th> 
+					<td>Mint</td> 
+					<td>Walnut</td> 
+				</tr> 
+			</table>
+	</div>
+</body>
+</html>

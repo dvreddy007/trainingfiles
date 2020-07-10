@@ -6,7 +6,22 @@ h2{color:#0000ff;}
 #fourthpara{color:orange}
 .firsthead{color:blue}
 
-section:first-child{
-	
+p:first-child{	
 	background:yellow;
 }
+section p:nth-child(3) {
+	background:red;
+}
+a:link, a:active{
+	color:blue;
+}
+a:hover{
+	color:green;	
+}
+a:visited{
+	color:orange;
+}
+div:hover p{ 
+	color:red;
+}
+	
