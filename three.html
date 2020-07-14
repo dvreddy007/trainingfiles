@@ -11,7 +11,7 @@
 </head>
 <body>
 Form attributes name, action, 
-<form name="myform" action="svaeform.php" method="get" oninput="x.value="color">
+<form name="myform" action="svaeform.php" method="post" oninput="x.value="color">
 <p><label>First name:</label><input type="text" name="firstname" value="" placeholder="enter first name in chars" required maxLength="3" size="50"></p>
 <p><label>Last name:</label><input type="text" name="lastname" value="" placeholder="enter last name" readonly></p>
 <p><label>Phone:</label><input type="text" name="phone" value="" placeholder="(1234)-(999)-(999)" disabled></p>
@@ -22,7 +22,7 @@ Form attributes name, action,
 <p><label>Range:</label><input type="range" name="range" value="15"></p>
 <p><label>Points:</label><input type="number" name="points" step="5"></p>
 <p><label>Password:</label><input type="password" name="password"></p>
-<input type="email" name="email" required>
+Email: <input type="email" name="email" required>
 <input type="color" name="color" value="">
 <output name="x"></output><br>
 Gender:
