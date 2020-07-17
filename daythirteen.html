@@ -6,12 +6,83 @@
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style>
+table {
+    width: 100%;
+}
+
+thead, tbody, tr, td, th { display: block; }
+
+tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+thead th {
+    height: 30px;
+
+    /*text-align: left;*/
+}
+
+tbody {
+    height: 120px;
+    overflow-y: auto;
+}
+
+thead {
+    /* fallback */
+}
+
+
+tbody td, thead th {
+    width: 19.2%;
+    float: left;
+}
+</style>
 </head>
 <body onload="onloadBody()">
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Color</th>
+            <th>Year</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="filterable-cell">Ford</td>
+            <td class="filterable-cell">Escort</td>
+            <td class="filterable-cell">Blue</td>
+            <td class="filterable-cell">2000</td>
+        </tr>
+        <tr>
+            <td class="filterable-cell">Ford</td>
+            <td class="filterable-cell">Escort</td>
+            <td class="filterable-cell">Blue</td>
+            <td class="filterable-cell">2000</td>
+        </tr>
+        <tr>
+            <td class="filterable-cell">Ford</td>
+            <td class="filterable-cell">Escort</td>
+            <td class="filterable-cell">Blue</td>
+            <td class="filterable-cell">2000</td>
+        </tr>
+        <tr>
+            <td class="filterable-cell">Ford</td>
+            <td class="filterable-cell">Escort</td>
+            <td class="filterable-cell">Blue</td>
+            <td class="filterable-cell">2000</td>
+        </tr>
+    </tbody>
+</table>
 <!-- +, -, *, / -->
 <div>
-	<input type="text" id="input1"><br><br>
-	<input type="text" id="input2"><br><br>
+	<input type="text" id="input1" value=""><br><br>
+	<input type="text" id="input2" value=""><br><br>
 	<button type="button" onclick="add()">Add</button>
 	<button type="button" onclick="multiply()">Multiply</button>
 	<button type="button" onclick="subtract()">Subtract</button>
@@ -28,7 +99,7 @@ function add(){
 }
 function multiply(){	
 	result = parseInt(val1.value)*parseInt(val2.value);
-	document.getElementById('result').innerHTML = 'The result of additon is :' + result;
+	document.getElementById('result').innerHTML = 'The result of multiply is :' + result;
 }
 
 function onloadBody(){
@@ -42,8 +113,17 @@ x = y = (3+5)*6-(10/2);
 		console.log('decrement' + i);
 	}*/
 let a = 10;
-let b = a++;
+let b = ++a;
 console.log(b);	
+
+let num1 = '10';
+let num2 = '10';
+
+if(num1==10){
+	console.log('equally identical with type')
+} else{
+	console.log('not equally identical with type')
+}
 
 let firstName="venkat";
 let socialStatus = 'single';
@@ -58,8 +138,34 @@ let socialStatus = 'single';
 	for(i=0; i<fruits.length; i++){		
 		console.log('the fruit is ' + fruits[i] + ' index of item is ' + i);
 	}
+	
+	let job = 'designer';
+
+
+switch (job) {
+    case 'teacher':
+		document.getElementById('result').innerHTML = firstName + ' teaches kids how to code.';
+        break;
+    case 'instructor':
+        document.getElementById('result').innerHTML = firstName + ' teaches kids how to code.';
+        break;
+    case 'driver':
+        document.getElementById('result').innerHTML = firstName + ' drives an uber in Lisbon.';
+        break;
+    case 'designer':
+        document.getElementById('result').innerHTML = firstName + ' designs beautiful websites.';
+        break;
+    default:
+        document.getElementById('result').innerHTML = firstName + ' does something else.';
 }
 
+
+
+}
+
+
+
+// document.write(mesg);
 
 
 </script>
