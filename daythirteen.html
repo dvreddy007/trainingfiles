@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="assets/css/main.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body onload="onloadBody()">
+<!-- +, -, *, / -->
+<div>
+	<input type="text" id="input1"><br><br>
+	<input type="text" id="input2"><br><br>
+	<button type="button" onclick="add()">Add</button>
+	<button type="button" onclick="multiply()">Multiply</button>
+	<button type="button" onclick="subtract()">Subtract</button>
+	<br><br>
+	<h1><span id="result"></span></h1>
+</div>	
+<script>
+let val1 = document.getElementById('input1');
+let val2 = document.getElementById('input2');
+let result=0;
+function add(){	
+	result = parseInt(val1.value)+parseInt(val2.value);
+	document.getElementById('result').innerHTML = 'The result of additon is :' + result;
+}
+function multiply(){	
+	result = parseInt(val1.value)*parseInt(val2.value);
+	document.getElementById('result').innerHTML = 'The result of additon is :' + result;
+}
+
+function onloadBody(){
+let x, y;
+x = y = (3+5)*6-(10/2);
+	console.log(x);
+	for(i=1; i<=9; ++i){
+		console.log('increment' + i);
+	}
+	/*for(i=0; i<=9; i--){
+		console.log('decrement' + i);
+	}*/
+let a = 10;
+let b = a++;
+console.log(b);	
+
+let firstName="venkat";
+let socialStatus = 'single';
+
+	if(socialStatus=='married'){
+		console.log(firstName + ' is married');
+	}else{
+		console.log(firstName + 'getting married soon');
+	}
+	
+	let fruits = ['Apple', 'Banana', 'Mango'];
+	for(i=0; i<fruits.length; i++){		
+		console.log('the fruit is ' + fruits[i] + ' index of item is ' + i);
+	}
+}
+
+
+
+</script>
+</body>
+</html>
