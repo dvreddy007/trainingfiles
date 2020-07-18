@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="assets/css/main.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style>
+table {
+    width: 100%;
+}
+
+thead, tbody, tr, td, th { display: block; }
+
+tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+thead th {
+    height: 30px;
+
+    /*text-align: left;*/
+}
+
+tbody {
+    height: 120px;
+    overflow-y: auto;
+}
+
+thead {
+    /* fallback */
+}
+
+
+tbody td, thead th {
+    width: 19.2%;
+    float: left;
+}
+</style>
+</head>
+<body onload="onloadBody()">
+
+<!-- +, -, *, / -->
+<div>	
+	<h1><span id="result"></span></h1>
+</div>	
+<script>
+function onloadBody(){
+	let alpha = ["a", "b", "c"]; 
+	let numeric = [...alpha, 1, 2, 3];
+	let persons = [{
+		name:"venkat",
+		profession:"it employee",
+		age:42
+	},
+	{
+		name:"John",
+		profession:"administrator",
+		age:35
+	}	
+	]
+	
+	let employees = [...persons,
+	{
+		name:"ravi",
+		profession:"it employee",
+		age:35
+	},
+	{
+		name:"raju",
+		profession:"administrator IT",
+		age:35
+	}	
+	]
+	
+	for(i=0; i<employees.length; i++){
+		console.log('item from array of employees' + JSON.stringify(employees[i]));
+	}
+	
+	employees.forEach((element)=>{
+		console.log(element);
+	})
+	
+	let nums = [1,2,3,4,5];
+	
+	let x = nums.map((el)=>{return el * 2});
+	console.log(x);
+	
+	//let y = nums.reverse();
+	let y = nums.reduceRight((el)=>{return el});
+	console.log(y);
+	
+	function isBigEnough(element, index, array) { 
+		return (element >= 10); 
+	} 
+	let passed = [12, 5, 8, 130, 44].filter((i) => {return i>=10;}); 
+	document.write("Test Value : " + passed + "<br><br>");  
+	
+	
+	
+	// let alphaNumeric = alpha.concat(numeric); 
+	console.log("alphaNumeric : " + JSON.stringify(employees)); 
+	document.write("alphaNumeric : " + JSON.stringify(employees));
+}
+</script>
+</body>
+</html>
