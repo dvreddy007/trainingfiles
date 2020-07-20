@@ -50,8 +50,14 @@ tbody td, thead th {
 </div>	
 <script>
 function onloadBody(){
+
+	//concat with concat method or else with spread operator(...)
 	let alpha = ["a", "b", "c"]; 
 	let numeric = [...alpha, 1, 2, 3];
+	
+	// let contactarray = alpha.concat(numeric);	
+	document.write(numeric);
+		
 	let persons = [{
 		name:"venkat",
 		profession:"it employee",
@@ -74,23 +80,34 @@ function onloadBody(){
 		name:"raju",
 		profession:"administrator IT",
 		age:35
-	}	
+	}
 	]
+	employees.push({
+		name:"krishna",
+		profession:"administrator software",
+		age:26
+	})
+	console.log(JSON.stringify(employees));
+	
 	
 	for(i=0; i<employees.length; i++){
-		console.log('item from array of employees' + JSON.stringify(employees[i]));
+		console.log('item from array of employees' + JSON.stringify(employees[i].profession));
 	}
 	
-	employees.forEach((element)=>{
-		console.log(element);
+	employees.forEach((el)=>{
+		document.write(el.name + '<br>');
 	})
 	
-	let nums = [1,2,3,4,5];
+	let nums = [6,9,7,3,4,8];
 	
+	let z = nums.sort();
+	
+	document.write('<br><br>' + z);
 	let x = nums.map((el)=>{return el * 2});
 	console.log(x);
 	
 	//let y = nums.reverse();
+	// let y = nums.reduce((el)=>{return el});
 	let y = nums.reduceRight((el)=>{return el});
 	console.log(y);
 	
@@ -98,9 +115,12 @@ function onloadBody(){
 		return (element >= 10); 
 	} 
 	let passed = [12, 5, 8, 130, 44].filter((i) => {return i>=10;}); 
-	document.write("Test Value : " + passed + "<br><br>");  
+	document.write("Test Value : " + passed + "<br><br>");  	
 	
+	passed = [12, 5, 8, 130, 44];
 	
+	passed.push(15);
+	console.log('passed array values'+ passed);
 	
 	// let alphaNumeric = alpha.concat(numeric); 
 	console.log("alphaNumeric : " + JSON.stringify(employees)); 
