@@ -89,10 +89,12 @@ function onloadBody(){
 	})
 	console.log(JSON.stringify(employees));
 	
-	
-	for(i=0; i<employees.length; i++){
+	var xyz = 10; 
+	for(let i=0; i<employees.length; i++){
 		console.log('item from array of employees' + JSON.stringify(employees[i].profession));
+		console.log(xyz);
 	}
+	console.log(i);
 	
 	employees.forEach((el)=>{
 		document.write(el.name + '<br>');
