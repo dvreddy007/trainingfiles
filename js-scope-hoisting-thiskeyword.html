@@ -1,0 +1,94 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>flex</title>
+		<style>
+		.main{
+			display:flex;
+			flex: 1 1 1;
+			flex-wrap: wrap;
+			flex-direction: row;
+		}
+		.main div{
+			padding:15px;
+			margin: 10px;
+			background: #000076;
+			width:400px;
+			color: #ffffff;
+		}
+		table{
+			width:100%;
+			border-collapse:collapse;
+		}
+		table th{
+			background: #000076;
+			color: #ffffff;
+		}
+		table td{			
+			background: #f4f5e1;
+		}
+		table th, td{
+			width:250px;
+			padding:10px;
+			border: 1px solid #c1c1c1;
+			text-align: center;
+		}
+		</style>
+	</head>
+<body>
+
+<br>
+<br>
+Local Scope
+Global Scope
+
+<br>
+<br>
+
+<div id="demo"> </div>
+
+
+
+<script>
+/*let person = {
+  firstName: "John",
+  lastName : "Doe",
+  id     : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+// Display data from the object:
+document.getElementById("demo").innerHTML = person.fullName();*/
+var person1 = {
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+var person2 = {
+  firstName:"John",
+  lastName: "Doe",
+}
+var x = person1.fullName.call(person2); 
+document.getElementById("demo").innerHTML = x; 
+//console.log(x);
+let x = 10, y=25;
+
+//var x;
+function myFunction(){	
+	console.log(x);
+}
+function myFunction1(){
+	x = 20;
+	console.log(y);
+	console.log(x);
+}
+myFunction();
+myFunction1();
+//console.log(x);
+
+</script>	
+</body>
+</html>	

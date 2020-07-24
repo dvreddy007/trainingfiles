@@ -1,0 +1,209 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>ES6 features</title>
+		<style>
+		
+		</style>
+	</head>
+<body>
+
+<br>
+<br>
+
+
+<br>
+<br>
+
+<div id="demo"> </div>
+
+
+
+<script>
+//Arrow functions
+
+function myfunc(){
+//code statements here
+}
+// let name = "Satish";
+//firstName = "";
+/*
+var object = {
+    name: "Venkat", 
+    getName: () => {return this.name},
+    regularGetName: function() { return this.name },
+    arrowGetThis: () => this,
+    regularGetThis: function() { return this }
+}
+
+console.log(name)
+console.log(object.getName());
+console.log(object.arrowGetThis());
+console.log(this.name)
+console.log(object.regularGetName());
+console.log(object.regularGetThis());
+*/
+
+//var name = "Bob", time = "today";
+
+// Classes objects
+// Example with class of this reference
+/*
+class someClass {
+    constructor() {
+		this.firstName = "Venkat";
+		this.lastName = "Dumpa";
+		//this.name = "Venkat"
+    }
+
+    testRegular() {
+        return () => { return this }
+
+    }
+
+    /*testArrow() {
+        return () => this.name;
+    }
+}
+
+var obj = new someClass();
+
+console.log(obj.name)
+console.log(obj.testRegular()());
+console.log(obj.testArrow()());
+
+*/
+//Classes
+// As we know them from "real" languages. Syntactic sugar on top of prototype-inheritence.
+/*
+class SkinnedMesh extends THREE.Mesh {
+  constructor(geometry, materials) {
+    super(geometry, materials);
+
+    this.idMatrix = SkinnedMesh.defaultMatrix();
+    this.bones = [];
+    this.boneMatrices = [];
+    //...
+  }
+  update(camera) {
+    //...
+    super.update();
+  }
+  get boneCount() {
+    return this.bones.length;
+  }
+  set matrixType(matrixType) {
+    this.idMatrix = SkinnedMesh[matrixType]();
+  }
+  static defaultMatrix() {
+    return new THREE.Matrix4();
+  }
+}
+
+*/
+
+
+
+//Sting Interpolation
+/*
+var name = "Bob", time = "today";
+
+var multiLine = `This Line 
+Spans Multiple 
+Lines`
+
+
+console.log(`Hello ${name},how are you ${time}?`)
+console.log(multiLine)*/
+
+/* Prototype inheritence */
+// Object prototype-inheritence in Javascript
+/*
+let animal = {
+  eats: true
+};
+let rabbit = {
+  jumps: true
+};
+
+rabbit.__proto__ = animal; // (*)
+
+// we can find both properties in rabbit now:
+alert( rabbit.eats ); // true (**)
+alert( rabbit.jumps ); // true
+*/
+/*
+let animal = {
+  eats: true,
+  walk() {
+    //this method won't be used by rabbit
+  }
+};
+
+let rabbit = {
+  __proto__: animal
+};
+
+rabbit.walk = function() {
+  alert("Rabbit! Bounce-bounce!");
+};
+
+rabbit.walk(); // Rabbit! Bounce-bounce!
+*/
+
+// prototype inheritence with properties 
+
+/*
+let animal = {
+  eats: true,
+  walk() {
+    alert("Animal walk");
+  }
+};
+
+let rabbit = {
+  jumps: true,
+  __proto__: animal
+};
+
+let longEar = {
+  earLength: 10,
+  __proto__: rabbit
+};
+
+// walk is taken from the prototype chain
+longEar.walk(); // Animal walk
+alert(longEar.jumps); // true (from rabbit) 
+*/
+
+
+/* prototype inher with setter and getter
+/*
+let user = {
+  name: "John",
+  surname: "Smith",
+
+  set fullName(value) {
+    [this.name, this.surname] = value.split(" ");
+  },
+
+  get fullName() {
+    return `${this.name} ${this.surname}`;
+  }
+};
+
+let admin = {
+  __proto__: user,
+  isAdmin: true
+};
+
+alert(admin.fullName); // John Smith (*)
+
+// setter triggers!
+admin.fullName = "Alice Cooper"; // (**)*/
+
+
+</script>	
+</body>
+</html>	
