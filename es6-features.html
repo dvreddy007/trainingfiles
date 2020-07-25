@@ -11,7 +11,12 @@
 
 <br>
 <br>
-
+<pre> 
+let me                   explain
+about es6
+features
+in JS
+</pre>
 
 <br>
 <br>
@@ -22,39 +27,44 @@
 
 <script>
 //Arrow functions
-
-function myfunc(){
-//code statements here
-}
-// let name = "Satish";
-//firstName = "";
 /*
+function myfunc(a, b){
+//code statements here
+return a*b;
+}
+myfunc(7,9);
+myval = myval(a,b) => {return a*b};
+console.log(myval(7,9));
+
+//firstName = "";
+*/
+let name = "Satish";
 var object = {
     name: "Venkat", 
     getName: () => {return this.name},
-    regularGetName: function() { return this.name },
+    regularGetName: function(){ return this.name },
     arrowGetThis: () => this,
     regularGetThis: function() { return this }
 }
 
-console.log(name)
+console.log(object.name);
 console.log(object.getName());
 console.log(object.arrowGetThis());
 console.log(this.name)
 console.log(object.regularGetName());
 console.log(object.regularGetThis());
-*/
+
 
 //var name = "Bob", time = "today";
 
 // Classes objects
 // Example with class of this reference
-/*
+
 class someClass {
     constructor() {
-		this.firstName = "Venkat";
-		this.lastName = "Dumpa";
-		//this.name = "Venkat"
+		//this.firstName = "Venkat";
+		//this.lastName = "Dumpa";
+		this.name = "Venkat"
     }
 
     testRegular() {
@@ -62,7 +72,7 @@ class someClass {
 
     }
 
-    /*testArrow() {
+   testArrow() {
         return () => this.name;
     }
 }
@@ -73,7 +83,7 @@ console.log(obj.name)
 console.log(obj.testRegular()());
 console.log(obj.testArrow()());
 
-*/
+
 //Classes
 // As we know them from "real" languages. Syntactic sugar on top of prototype-inheritence.
 /*
@@ -106,22 +116,27 @@ class SkinnedMesh extends THREE.Mesh {
 
 
 //Sting Interpolation
-/*
+
+function mystringinterpolate(){
 var name = "Bob", time = "today";
 
-var multiLine = `This Line 
+var multiLine = `This Line ${name}
 Spans Multiple 
-Lines`
+Lines`;
+console.log(multiLine)
+document.write('Hello ' + name + ', how are you ' +  time + '<br><br>');
 
+document.write(`Hello ${name}, how are you ${time}?`)
+}
 
-console.log(`Hello ${name},how are you ${time}?`)
-console.log(multiLine)*/
+mystringinterpolate();
 
 /* Prototype inheritence */
 // Object prototype-inheritence in Javascript
 /*
 let animal = {
-  eats: true
+  eats: true;
+  fourlegs: true;
 };
 let rabbit = {
   jumps: true
@@ -130,14 +145,16 @@ let rabbit = {
 rabbit.__proto__ = animal; // (*)
 
 // we can find both properties in rabbit now:
-alert( rabbit.eats ); // true (**)
-alert( rabbit.jumps ); // true
+alert( "rabbit eats " + rabbit.eats ); // true (**)
+alert( "rabbit jumps " + rabbit.jumps ); // true
 */
 /*
 let animal = {
   eats: true,
+  fourlegs: true,
   walk() {
     //this method won't be used by rabbit
+	//alert("Rabbit! Bounce-bounce!");
   }
 };
 
@@ -149,8 +166,8 @@ rabbit.walk = function() {
   alert("Rabbit! Bounce-bounce!");
 };
 
-rabbit.walk(); // Rabbit! Bounce-bounce!
-*/
+rabbit.walk()// Rabbit! Bounce-bounce!
+
 
 // prototype inheritence with properties 
 
@@ -178,7 +195,7 @@ alert(longEar.jumps); // true (from rabbit)
 */
 
 
-/* prototype inher with setter and getter
+// pototype inher with setter and getter
 /*
 let user = {
   name: "John",
@@ -202,8 +219,7 @@ alert(admin.fullName); // John Smith (*)
 
 // setter triggers!
 admin.fullName = "Alice Cooper"; // (**)*/
-
-
+//}
 </script>	
 </body>
 </html>	

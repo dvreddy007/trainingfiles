@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ES6 Module Demo</title>
+</head>
+<body>
+
+    <script type="module" src="./app.js"></script>
+	<script>
+	//file:///F:/Training/html/trainingfiles/modules.html
+
+
+// http://localhost:8080/modules.html
+		// Iterating over array For in and for of
+		let letters = ["a", "b", "c", "d", "e", "f"];
+		for(let letter in letters) {
+			console.log("for in ...... " + letter); //0,1,2,3,4,5
+		}
+		
+		for(let letter of letters) {
+			console.log("for of ...... " + letter); // a,b,c,d,e,f
+		}
+
+		// Iterating over strings
+		let greet = "Hello World!";
+		for (let letter in greet){
+			console.log("for in string ...... " + letter); // 0,1,2
+		}
+		for(let character of greet) {
+			console.log("for of ...... String "  + character); // H,e,l,l,o, ,W,o,r,l,d,!
+		}	
+		
+		// Destructuring Assignment
+		/*
+The destructuring assignment is an expression that makes it easy to extract values from arrays, or properties from objects, into distinct variables by providing a shorter syntax. There are two kinds of destructuring assignment expressions—the array and object destructuring assignment
+*/
+	// ES5 syntax
+	/*var fruits = ["Apple", "Banana"];
+
+	var a = fruits[0];
+	var b = fruits[1];
+	alert(a); // Apple
+	alert(b); // Banana
+	
+	// ES6 syntax
+	let fruits = ["Apple", "Banana"];
+
+	let [a, b] = fruits; // Array destructuring assignment
+
+	alert(a); // Apple
+	alert(b); // Banana
+		
+	// The object destructuring assignment
+
+	// ES5 syntax
+	var person = {name: "Peter", age: 28};
+
+	var name = person.name;
+	var age = person.age;
+
+	alert(name); // Peter
+	alert(age); // 28
+	
+	// ES6 syntax
+	let person = {name: "Peter", age: 28};
+
+	let {name, age} = person; // Object destructuring assignment
+
+	alert(name); // Peter
+	alert(age); // 28	
+	
+	*/
+	
+	</script>
+</body>
+</html>
