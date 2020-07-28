@@ -6,8 +6,10 @@
 <link rel="stylesheet" href="assets/css/form-style.css">
 
 <script>
-
-
+// Defining a function to display error message
+function printError(elemId, hintMsg) {
+    document.getElementById(elemId).innerHTML = hintMsg;
+}
 // Defining a function to validate form 
 function validateForm() {
     // Retrieving the values of form elements 
@@ -32,6 +34,9 @@ function validateForm() {
     if(name == "") {
         printError("nameErr", "Please enter your name");
     } else {
+		/*checkName(name){
+		 return http.get(url, {"name":name})
+		}*/
         var regex = /^[a-zA-Z\s]+$/;                
         if(regex.test(name) === false) {
             printError("nameErr", "Please enter a valid name");
@@ -89,12 +94,12 @@ function validateForm() {
        return false;
     } else {
         // Creating a string from input data for preview
-        var dataPreview = "You've entered the following details: \n" +
-                          "Full Name: " + name + "\n" +
-                          "Email Address: " + email + "\n" +
-                          "Mobile Number: " + mobile + "\n" +
-                          "Country: " + country + "\n" +
-                          "Gender: " + gender + "\n";
+        var dataPreview = "You've entered the following details: \n<br>" +
+                          "Full Name: " + name + "\n<br>" +
+                          "Email Address: " + email + "\n<br>" +
+                          "Mobile Number: " + mobile + "\n<br>" +
+                          "Country: " + country + "\n<br>" +
+                          "Gender: " + gender + "\n<br>";
         if(hobbies.length) {
             dataPreview += "Hobbies: " + hobbies.join(", ");
         }
@@ -124,10 +129,7 @@ function getFormData($form){
 
 	return indexed_array;
 }*/
-// Defining a function to display error message
-function printError(elemId, hintMsg) {
-    document.getElementById(elemId).innerHTML = hintMsg;
-}
+
 </script>
 </head>
 <body>
@@ -152,7 +154,7 @@ function printError(elemId, hintMsg) {
         <label>Country</label>
         <select name="country">
             <option>Select</option>
-            <option>Australia</option>
+            <option value="AU">Australia</option>
             <option>India</option>
             <option>United States</option>
             <option>United Kingdom</option>
